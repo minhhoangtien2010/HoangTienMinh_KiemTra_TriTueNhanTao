@@ -1,0 +1,391 @@
+{
+ "report": {
+  "so_dong_ban_dau": 4707,
+  "gioi_tinh_chua_dong_nhat": 11,
+  "nhan_chua_dong_nhat": 6,
+  "glucose_doi_don_vi": 4,
+  "gia_tri_loi_chuyen_NaN": {
+   "Tuoi": 0,
+   "Glucose": 2,
+   "HbA1C": 1,
+   "Cholesterol": 1,
+   "HDL": 0,
+   "LDL": 0,
+   "Triglycerid": 1,
+   "Creatinine": 3,
+   "Ure": 0,
+   "AcidUric": 0,
+   "AST": 0,
+   "ALT": 0
+  },
+  "dong_trung": 0,
+  "dong_thieu_nhan": 0,
+  "so_dong_sau_lam_sach": 4707,
+  "thieu_sau_lam_sach": {
+   "Tuoi": 1,
+   "GioiTinh": 4,
+   "Glucose": 3,
+   "HbA1C": 3,
+   "Cholesterol": 3,
+   "LDL": 2,
+   "Triglycerid": 4,
+   "Creatinine": 4,
+   "AcidUric": 5,
+   "AST": 2,
+   "ALT": 2
+  },
+  "ty_le_gia_tri_pho_bien": {
+   "Tuoi": 0.02634934126646834,
+   "Glucose": 0.1526360544217687,
+   "HbA1C": 0.9634353741496599,
+   "Cholesterol": 0.7701955782312925,
+   "HDL": 0.9073719991502018,
+   "LDL": 0.9974495217853347,
+   "Triglycerid": 0.7697214543908144,
+   "Creatinine": 0.12183712523920902,
+   "Ure": 0.47971106862120244,
+   "AcidUric": 0.9306678009357721,
+   "AST": 0.06546227417640808,
+   "ALT": 0.05398512221041445
+  },
+  "cot_bi_loai": [
+   "HbA1C",
+   "HDL",
+   "LDL",
+   "AcidUric"
+  ],
+  "nguong_loai_cot": 0.9,
+  "dac_trung_su_dung": [
+   "Tuoi",
+   "Glucose",
+   "Cholesterol",
+   "Triglycerid",
+   "Creatinine",
+   "Ure",
+   "AST",
+   "ALT",
+   "GioiTinh"
+  ]
+ },
+ "split": {
+  "Train": {
+   "n": 3294,
+   "ty_le_co_nguy_co": 0.2331511839708561
+  },
+  "Validation": {
+   "n": 706,
+   "ty_le_co_nguy_co": 0.23229461756373937
+  },
+  "Test": {
+   "n": 707,
+   "ty_le_co_nguy_co": 0.2333804809052334
+  }
+ },
+ "results": [
+  {
+   "Mo_hinh": "Random Forest",
+   "Sieu_tham_so": {
+    "max_depth": 5,
+    "min_samples_leaf": 3
+   },
+   "Train": {
+    "Accuracy": 0.9942319368548876,
+    "Precision": 1.0,
+    "Recall": 0.9752604166666666,
+    "F1": 0.987475280158207,
+    "ROC_AUC": 0.9995896839535497
+   },
+   "Validation": {
+    "Accuracy": 0.990084985835694,
+    "Precision": 1.0,
+    "Recall": 0.9573170731707317,
+    "F1": 0.9781931464174455,
+    "ROC_AUC": 0.9940149401494014
+   },
+   "Test": {
+    "Accuracy": 0.9929278642149929,
+    "Precision": 1.0,
+    "Recall": 0.9696969696969697,
+    "F1": 0.9846153846153847,
+    "ROC_AUC": 0.9952924074695293
+   },
+   "Giay": 4.5,
+   "CV_F1_mean": 0.9836598701707917,
+   "CV_F1_std": 0.0017245411617262498
+  },
+  {
+   "Mo_hinh": "XGBoost",
+   "Sieu_tham_so": {
+    "learning_rate": 0.1,
+    "max_depth": 5
+   },
+   "Train": {
+    "Accuracy": 1.0,
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0,
+    "ROC_AUC": 1.0
+   },
+   "Validation": {
+    "Accuracy": 0.990084985835694,
+    "Precision": 1.0,
+    "Recall": 0.9573170731707317,
+    "F1": 0.9781931464174455,
+    "ROC_AUC": 0.9890761407614076
+   },
+   "Test": {
+    "Accuracy": 0.9929278642149929,
+    "Precision": 0.9938271604938271,
+    "Recall": 0.9757575757575757,
+    "F1": 0.9847094801223242,
+    "ROC_AUC": 0.992139103209214
+   },
+   "Giay": 0.5,
+   "CV_F1_mean": 0.9810641095168646,
+   "CV_F1_std": 0.003353721090940614
+  },
+  {
+   "Mo_hinh": "Decision Tree",
+   "Sieu_tham_so": {
+    "max_depth": 5,
+    "min_samples_leaf": 5
+   },
+   "Train": {
+    "Accuracy": 0.9939283545840923,
+    "Precision": 0.9934036939313984,
+    "Recall": 0.98046875,
+    "F1": 0.9868938401048493,
+    "ROC_AUC": 0.9980896592108736
+   },
+   "Validation": {
+    "Accuracy": 0.990084985835694,
+    "Precision": 1.0,
+    "Recall": 0.9573170731707317,
+    "F1": 0.9781931464174455,
+    "ROC_AUC": 0.9789172891728917
+   },
+   "Test": {
+    "Accuracy": 0.9886845827439887,
+    "Precision": 0.9757575757575757,
+    "Recall": 0.9757575757575757,
+    "F1": 0.9757575757575757,
+    "ROC_AUC": 0.9869618696186961
+   },
+   "Giay": 0.5,
+   "CV_F1_mean": 0.9715289990474962,
+   "CV_F1_std": 0.004638569247745662
+  },
+  {
+   "Mo_hinh": "SVM (RBF)",
+   "Sieu_tham_so": {
+    "C": 0.5
+   },
+   "Train": {
+    "Accuracy": 0.9869459623557985,
+    "Precision": 0.9701686121919585,
+    "Recall": 0.9739583333333334,
+    "F1": 0.9720597790773229,
+    "ROC_AUC": 0.9935993789588281
+   },
+   "Validation": {
+    "Accuracy": 0.9759206798866855,
+    "Precision": 0.9622641509433962,
+    "Recall": 0.9329268292682927,
+    "F1": 0.9473684210526315,
+    "ROC_AUC": 0.9805429304293043
+   },
+   "Test": {
+    "Accuracy": 0.9717114568599717,
+    "Precision": 0.9503105590062112,
+    "Recall": 0.9272727272727272,
+    "F1": 0.9386503067484663,
+    "ROC_AUC": 0.982131275858213
+   },
+   "Giay": 1.5,
+   "CV_F1_mean": 0.8975838799614891,
+   "CV_F1_std": 0.008118984149291087
+  },
+  {
+   "Mo_hinh": "Logistic Regression",
+   "Sieu_tham_so": {
+    "C": 0.1
+   },
+   "Train": {
+    "Accuracy": 0.9717668488160291,
+    "Precision": 0.9100850546780073,
+    "Recall": 0.9752604166666666,
+    "F1": 0.9415461973601509,
+    "ROC_AUC": 0.9929302957574558
+   },
+   "Validation": {
+    "Accuracy": 0.9674220963172805,
+    "Precision": 0.9075144508670521,
+    "Recall": 0.9573170731707317,
+    "F1": 0.9317507418397626,
+    "ROC_AUC": 0.982821078210782
+   },
+   "Test": {
+    "Accuracy": 0.9759547383309759,
+    "Precision": 0.9302325581395349,
+    "Recall": 0.9696969696969697,
+    "F1": 0.9495548961424333,
+    "ROC_AUC": 0.9855641283685563
+   },
+   "Giay": 0.2,
+   "CV_F1_mean": 0.9374476362609638,
+   "CV_F1_std": 0.004058121587349697
+  },
+  {
+   "Mo_hinh": "KNN",
+   "Sieu_tham_so": {
+    "n_neighbors": 5
+   },
+   "Train": {
+    "Accuracy": 0.9553734061930783,
+    "Precision": 0.9769585253456221,
+    "Recall": 0.828125,
+    "F1": 0.8964059196617337,
+    "ROC_AUC": 0.9923761629057799
+   },
+   "Validation": {
+    "Accuracy": 0.93342776203966,
+    "Precision": 0.968,
+    "Recall": 0.7378048780487805,
+    "F1": 0.8373702422145328,
+    "ROC_AUC": 0.9558545585455854
+   },
+   "Test": {
+    "Accuracy": 0.9278642149929278,
+    "Precision": 0.9453125,
+    "Recall": 0.7333333333333333,
+    "F1": 0.825938566552901,
+    "ROC_AUC": 0.9647433747064744
+   },
+   "Giay": 0.3,
+   "CV_F1_mean": 0.8454868794449896,
+   "CV_F1_std": 0.014372746889948431
+  }
+ ],
+ "best": "Random Forest",
+ "final_metrics": {
+  "Accuracy": 0.9929278642149929,
+  "Precision": 1.0,
+  "Recall": 0.9696969696969697,
+  "F1": 0.9846153846153847,
+  "ROC_AUC": 0.9952924074695293
+ },
+ "confusion_matrix": [
+  [
+   542,
+   0
+  ],
+  [
+   5,
+   160
+  ]
+ ],
+ "rule_glucose7": {
+  "Accuracy": 0.9929278642149929,
+  "Precision": 1.0,
+  "Recall": 0.9696969696969697,
+  "F1": 0.9846153846153847,
+  "ROC_AUC": 0.9864195460136419
+ },
+ "ablation_no_glucose": {
+  "Accuracy": 0.6166902404526167,
+  "Precision": 0.33540372670807456,
+  "Recall": 0.6545454545454545,
+  "F1": 0.44353182751540043,
+  "ROC_AUC": 0.7067315218606732
+ },
+ "thresholds": [
+  {
+   "nguong": 0.35,
+   "Precision": 1.0,
+   "Recall": 0.9757575757575757,
+   "F1": 0.9877300613496932,
+   "FN": 4,
+   "FP": 0
+  },
+  {
+   "nguong": 0.5,
+   "Precision": 1.0,
+   "Recall": 0.9696969696969697,
+   "F1": 0.9846153846153847,
+   "FN": 5,
+   "FP": 0
+  },
+  {
+   "nguong": 0.65,
+   "Precision": 1.0,
+   "Recall": 0.9696969696969697,
+   "F1": 0.9846153846153847,
+   "FN": 5,
+   "FP": 0
+  }
+ ],
+ "importance": [
+  {
+   "Feature": "Glucose",
+   "Importance": 0.7595592260500237,
+   "Std": 0.03021383490754308
+  },
+  {
+   "Feature": "Tuoi",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "Cholesterol",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "Triglycerid",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "Creatinine",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "Ure",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "AST",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "ALT",
+   "Importance": 0.0,
+   "Std": 0.0
+  },
+  {
+   "Feature": "GioiTinh",
+   "Importance": 0.0,
+   "Std": 0.0
+  }
+ ],
+ "missing_before": {
+  "Tuoi": 1,
+  "GioiTinh": 4,
+  "Glucose": 1,
+  "HbA1C": 2,
+  "Cholesterol": 2,
+  "HDL": 0,
+  "LDL": 2,
+  "Triglycerid": 3,
+  "Creatinine": 1,
+  "Ure": 0,
+  "AcidUric": 5,
+  "AST": 2,
+  "ALT": 2,
+  "NguyCoTieuDuong": 0
+ },
+ "xgboost": true
+}
